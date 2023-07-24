@@ -210,11 +210,10 @@ body{
 }
 
 .arrow{
-    /* margin-right: 8rem; */
-    width: 10rem;
+    /* width: 10rem; */
     text-align: right;
     /* margin: 0 0 0 auto; */
-    margin: 0 0 0 auto;
+    /* margin: 0 0 0 auto; */
 }
 
 .arrow_symbol{
@@ -224,5 +223,3 @@ body{
     padding: .5rem .8rem;
     margin-right: .8rem;
 }
-
-
