@@ -34,29 +34,7 @@ body{
 
 /* common styles */
 
-/* Button */
-.btn_primary{
-     position: relative;
-     cursor: pointer;
-}
 
-.btn_primary::after{
-    content: "";
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    background: var(--col-primary);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: .3rem;
-    transition: all .3s;
-}
-
-.btn_primary:hover::after{
-    width: 100%;
-}
 
 /* Anchor links */
 
@@ -141,18 +119,22 @@ body{
     content: "";
     clear: both;
     /* display: table; */
+
+    @media (max-width: 625px){
+        max-width: 40rem;
+    }
 }
 
 .col-1-of-2{
     width: calc((100% - 6rem) / 2);
     float: left;
     /* background-color: lightblue; */
+
+    @media (max-width: 625px){
+        width: 100%;
+    }
 }
 
-.image_section{
-    float: right;
-    margin-top: 3rem;
-}
 
 .main_content{
     margin-top: 5rem;
@@ -161,6 +143,7 @@ body{
 /* Left Content Styling */
 
 .heading_primary{
+    display: inline-block;
     font-size: 3rem;
     width: 20rem;
     font-weight: 700;
@@ -171,6 +154,7 @@ body{
     line-height: 1.5;
     margin: 2rem 0;
 }
+/* Button */
 
 .btn{
     font-size: 1.5rem;
@@ -181,8 +165,35 @@ body{
     margin-bottom: 3rem;
 }
 
+.btn_primary{
+    position: relative;
+    cursor: pointer;
+}
+
+.btn_primary::after{
+   content: "";
+   display: inline-block;
+   width: 50%;
+   height: 100%;
+   position: absolute;
+   background: var(--col-primary);
+   top: 0;
+   left: 0;
+   z-index: -1;
+   border-radius: .3rem;
+   transition: all .3s;
+}
+
+.btn_primary:hover::after{
+   width: 100%;
+}
+
 .content_section{
     padding: 3rem 4rem;
+
+    @media (max-width: 625px){
+        text-align: center;
+    }
 }
 
 .social{
@@ -193,33 +204,37 @@ body{
 
 /* Image Section */
 
-.image_section{
-    width: 30rem;
-    /* height: 30rem; */
-}
-
 .main_img{
-    width: 100%;
-    height: 30rem;
+    max-width: 30rem;
+    min-height: 30rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-inline: auto;
 }
 
 .fruit_img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .arrow{
-    /* width: 10rem; */
     text-align: right;
-    /* margin: 0 0 0 auto; */
-    /* margin: 0 0 0 auto; */
+
+    @media (max-width: 625px){
+        text-align: center;
+    }
 }
 
 .arrow_symbol{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #333;
     border: 1px solid #333;
     padding: .5rem .8rem;
+
+    
+}
+
+.arrow_symbol:not(:last-child){
     margin-right: .8rem;
 }
